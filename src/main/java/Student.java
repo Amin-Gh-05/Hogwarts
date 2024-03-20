@@ -19,6 +19,11 @@ public class Student extends Account {
         }
     }
 
+    @Override
+    public void signUp(String text) {
+        super.signUp(text);
+    }
+
     public List<Course> getCourseList() {
         return this.courseList;
     }

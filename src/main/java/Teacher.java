@@ -6,6 +6,7 @@ public class Teacher extends Account {
     private final List<Course> courseList = new ArrayList<>();
     private final List<String> commentList = new ArrayList<>();
     private int score;
+
     public Teacher(String username, String password) {
         super(username, password, "teacher");
     }
@@ -18,22 +19,17 @@ public class Teacher extends Account {
         }
     }
 
+    @Override
+    public void signUp(String text) {
+        super.signUp(text);
+    }
+
     public List<Integer> getScoreList() {
         return this.scoreList;
     }
 
     public List<String> getCommentList() {
         return this.commentList;
-    }
-
-    public static void signUp(String text, String username, String password) {
-        List<String> mail = new ArrayList<>();
-        mail.add("teacher");
-        mail.add("sign_up");
-        mail.add(username);
-        mail.add(password);
-        Assistant.getInboxList().add(mail);
-        System.out.println("> Your sign-up request was successfully sent for admin");
     }
 
     public void viewStudents(Course course) {

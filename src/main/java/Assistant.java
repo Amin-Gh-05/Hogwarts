@@ -3,8 +3,14 @@ import java.util.List;
 
 public class Assistant extends Account {
     private static final List<List<String>> inboxList = new ArrayList<>();
+
     public Assistant(String username, String password) {
         super(username, password, "assistant");
+    }
+
+    @Override
+    public void signUp(String text) {
+        super.signUp(text);
     }
 
     public static List<List<String>> getInboxList() {

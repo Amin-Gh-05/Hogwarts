@@ -1,5 +1,7 @@
 import org.apache.commons.codec.digest.DigestUtils;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 public abstract class Account implements AccountManagement {
@@ -39,6 +41,7 @@ public abstract class Account implements AccountManagement {
     public String getUsername() {
         return this.username;
     }
+
     public String getUser() {
         return this.user;
     }
@@ -52,5 +55,15 @@ public abstract class Account implements AccountManagement {
         for (Course c : Hogwarts.getCourseList()) {
             System.out.println("- " + c.getTitle());
         }
+    }
+
+    public void signUp(String text) {
+        List<String> mail = new ArrayList<>();
+        mail.add(this.user);
+        mail.add("sign_up");
+        mail.add(this.username);
+        mail.add(this.password);
+        Assistant.getInboxList().add(mail);
+        System.out.println("> Your sign-up request was successfully sent for admin");
     }
 }
