@@ -27,6 +27,9 @@ public class Teacher extends Account {
     public List<Integer> getScoreList() {
         return this.scoreList;
     }
+    public List<Course> getCourseList() {
+        return this.courseList;
+    }
 
     public List<String> getCommentList() {
         return this.commentList;
