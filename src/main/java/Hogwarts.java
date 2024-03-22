@@ -9,6 +9,7 @@ public class Hogwarts {
     private static final List<Student> studentList = new ArrayList<>();
     private static final List<Assistant> assistantList = new ArrayList<>();
 
+    // getters
     public static List<Teacher> getTeacherList() {
         return teacherList;
     }
@@ -25,6 +26,7 @@ public class Hogwarts {
         return assistantList;
     }
 
+    // view users
     public static void viewAllTeachers() {
         System.out.println("> Here's list of all teachers:");
         for (Teacher t : teacherList) {
@@ -46,6 +48,7 @@ public class Hogwarts {
         }
     }
 
+    // add accounts
     public static void addTeacher(String username, String password) {
         Teacher teacher = new Teacher(username, password);
         userList.add(teacher);
@@ -69,6 +72,7 @@ public class Hogwarts {
         courseList.add(course);
     }
 
+    // get info via id
     public static void getUserInfoViaID(UUID uuid) {
         for (Account a : userList) {
             if (a.getAccountID().equals(uuid)) {

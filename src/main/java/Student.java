@@ -19,11 +19,7 @@ public class Student extends Account {
         }
     }
 
-    @Override
-    public void signUp(String text) {
-        super.signUp(text);
-    }
-
+    // getters
     public List<Course> getCourseList() {
         return this.courseList;
     }
@@ -36,12 +32,13 @@ public class Student extends Account {
         return this.house;
     }
 
+    // specific actions
     public void takeCourse(Course course) {
         this.courseList.add(course);
         this.scoreList.add(0.0);
         course.getStudentList().add(this);
         course.getScoreList().add(0.0);
-        System.out.println("> You're now enrolled for " + course.getTitle());
+        System.out.println("> You've now enrolled for " + course.getTitle());
     }
 
     public void takeQuiz() {

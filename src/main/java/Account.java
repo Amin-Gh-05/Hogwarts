@@ -38,6 +38,7 @@ public abstract class Account implements AccountManagement {
         }
     }
 
+    // getters
     public String getUsername() {
         return this.username;
     }
@@ -50,6 +51,7 @@ public abstract class Account implements AccountManagement {
         return this.accountID;
     }
 
+    // view all
     public void viewCourses() {
         System.out.println("> Here's the list of all courses:");
         for (Course c : Hogwarts.getCourseList()) {
@@ -57,7 +59,8 @@ public abstract class Account implements AccountManagement {
         }
     }
 
-    public void signUp(String text) {
+    // sign up request
+    public void signUp() {
         List<String> mail = new ArrayList<>();
         mail.add(this.user);
         mail.add("sign_up");

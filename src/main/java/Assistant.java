@@ -8,15 +8,12 @@ public class Assistant extends Account {
         super(username, password, "assistant");
     }
 
-    @Override
-    public void signUp(String text) {
-        super.signUp(text);
-    }
-
+    // getters
     public static List<List<String>> getInboxList() {
         return inboxList;
     }
 
+    // view all
     public void viewStudents(Course course) {
         System.out.println("> Here's the list of students enrolled for the course " + course.getTitle());
         for (Student s : course.getStudentList()) {
@@ -24,6 +21,7 @@ public class Assistant extends Account {
         }
     }
 
+    // sign up other accounts
     public void signUpTeacher(String username, String password) {
         Hogwarts.addTeacher(username, password);
         System.out.println("> Teacher " + username + " was successfully signed up");
@@ -44,6 +42,7 @@ public class Assistant extends Account {
         System.out.println("> Course " + title + " was successfully added");
     }
 
+    // remove other accounts
     public void removeTeacher(Teacher teacher) {
         Hogwarts.getTeacherList().remove(teacher);
         System.out.println("> Teacher " + teacher.getUsername() + " was successfully removed");

@@ -16,14 +16,11 @@ public class Teacher extends Account {
         System.out.println("> Here's the list of your courses:");
         for (Course c : this.courseList) {
             System.out.println("- " + c.getTitle());
+            viewStudents(c);
         }
     }
 
-    @Override
-    public void signUp(String text) {
-        super.signUp(text);
-    }
-
+    // getters
     public List<Integer> getScoreList() {
         return this.scoreList;
     }
@@ -35,10 +32,11 @@ public class Teacher extends Account {
         return this.commentList;
     }
 
+    // view all
     public void viewStudents(Course course) {
         System.out.println("> Here's the list of students enrolled for the course " + course.getTitle() + ":");
         for (Student s : course.getStudentList()) {
-            System.out.println("- " + s.getUsername());
+            System.out.println(". " + s.getUsername());
         }
     }
 
@@ -49,6 +47,7 @@ public class Teacher extends Account {
         }
     }
 
+    // specific actions
     public void takeCourse(Course course) {
         course.setTeacher(this);
         this.courseList.add(course);

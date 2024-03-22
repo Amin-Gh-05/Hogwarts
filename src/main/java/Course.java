@@ -15,6 +15,7 @@ public class Course {
         this.teacher = new Teacher("Unknown", "Unknown");
     }
 
+    // getters and setters
     public String getTitle() {
         return this.title;
     }
@@ -39,6 +40,7 @@ public class Course {
         return this.scoreList;
     }
 
+    // view all
     public void viewStudents() {
         System.out.println("> Here's the list of students enrolled in this course:");
         for (Student s : this.studentList) {
