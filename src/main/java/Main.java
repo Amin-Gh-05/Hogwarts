@@ -212,27 +212,31 @@ public class Main {
                         System.out.print("> Which student do you want to score? ");
                         String student = read.nextLine();
                         System.out.print("> Enter score (0 - 20): ");
-                        double score = read.nextDouble();
-                        read.nextLine();
-                        // check validity of scores
-                        while (score < 0 || score > 20) {
-                            System.out.print("> Please enter a valid score: ");
-                            score = read.nextDouble();
+                        try {
+                            double score = read.nextDouble();
                             read.nextLine();
-                        }
-                        boolean inStudentList = false;
-                        for (Student s : c.getStudentList()) {
-                            if (s.getUsername().equals(student)) {
-                                teacher.scoreStudent(c, s, score);
-                                inStudentList = true;
-                                break;
+                            // check validity of scores
+                            while (score < 0 || score > 20) {
+                                System.out.print("> Please enter a valid score: ");
+                                score = read.nextDouble();
+                                read.nextLine();
                             }
+                            boolean inStudentList = false;
+                            for (Student s : c.getStudentList()) {
+                                if (s.getUsername().equals(student)) {
+                                    teacher.scoreStudent(c, s, score);
+                                    inStudentList = true;
+                                    break;
+                                }
+                            }
+                            if (!(inStudentList)) {
+                                System.out.println("> Student not found!");
+                            }
+                            inCourseList = true;
+                            break;
+                        } catch (Exception e) {
+                            System.out.println("Invalid input!");
                         }
-                        if (!(inStudentList)) {
-                            System.out.println("> Student not found!");
-                        }
-                        inCourseList = true;
-                        break;
                     }
                 }
                 if (!(inCourseList)) {
@@ -339,17 +343,21 @@ public class Main {
                 for (Course c : Hogwarts.getCourseList()) {
                     if (c.getTitle().equals(course)) {
                         System.out.print("> Enter the score (0 - 10): ");
-                        int score = read.nextInt();
-                        read.nextLine();
-                        // check if student has entered a valid score
-                        while (score < 0 || score > 10) {
-                            System.out.print("> Please enter a valid score: ");
-                            score = read.nextInt();
+                        try {
+                            int score = read.nextInt();
                             read.nextLine();
+                            while (score < 0 || score > 10) {
+                                System.out.print("> Please enter a valid score: ");
+                                score = read.nextInt();
+                                read.nextLine();
+                            }
+                            // check if student has entered a valid score
+                            student.scoreTeacher(c, score);
+                            inList = true;
+                            break;
+                        } catch (Exception e) {
+                            System.out.println("> Invalid input!");
                         }
-                        student.scoreTeacher(c, score);
-                        inList = true;
-                        break;
                     }
                 }
                 if (!(inList)) {
