@@ -37,7 +37,7 @@ public class Hogwarts {
     public static void viewAllStudents() {
         System.out.println("> Here's list of all students:");
         for (Student s : studentList) {
-            System.out.println("- " + s.getUsername());
+            System.out.println("- " + s.getUsername() + " (" + s.getHouse() + ")");
         }
     }
 
@@ -45,6 +45,13 @@ public class Hogwarts {
         System.out.println("> Here's list of all courses:");
         for (Course c : courseList) {
             System.out.println("- " + c.getTitle() + ", Teacher: " + c.getTeacher().getUsername());
+        }
+    }
+
+    public static void viewCourseStudents(Course course) {
+        System.out.println("> Here's the list of students enrolled for the course " + course.getTitle());
+        for (Student s : course.getStudentList()) {
+            System.out.println("- " + s.getUsername() + " (" + s.getHouse() + ")");
         }
     }
 
@@ -86,8 +93,18 @@ public class Hogwarts {
         for (Course c : courseList) {
             if (c.getCourseID().equals(uuid)) {
                 System.out.println("> Title " + c.getTitle() + ", Teacher: " + c.getTeacher());
+                viewCourseStudents(c);
                 break;
             }
         }
+    }
+
+    public static boolean isUsernameAvailable(String username) {
+        for (Account user : userList) {
+            if (user.getUsername().equals(username)) {
+                return false;
+            }
+        }
+        return true;
     }
 }

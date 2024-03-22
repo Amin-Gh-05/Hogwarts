@@ -5,10 +5,10 @@ import java.util.List;
 import java.util.UUID;
 
 public abstract class Account implements AccountManagement {
-    private String username;
-    private String password;
     private final String user;
     private final UUID accountID;
+    private String username;
+    private String password;
 
     public Account(String username, String password, String user) {
         this.username = username;
@@ -61,12 +61,16 @@ public abstract class Account implements AccountManagement {
 
     // sign up request
     public void signUp() {
-        List<String> mail = new ArrayList<>();
-        mail.add(this.user);
-        mail.add("sign_up");
-        mail.add(this.username);
-        mail.add(this.password);
-        Assistant.getInboxList().add(mail);
-        System.out.println("> Your sign-up request was successfully sent for admin");
+        if (Hogwarts.isUsernameAvailable(this.username)) {
+            List<String> mail = new ArrayList<>();
+            mail.add(this.user);
+            mail.add("sign_up");
+            mail.add(this.username);
+            mail.add(this.password);
+            Assistant.getInboxList().add(mail);
+            System.out.println("> Your sign-up request was successfully sent for admin");
+        } else {
+            System.out.println("> Username not available!");
+        }
     }
 }

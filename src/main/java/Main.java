@@ -6,6 +6,7 @@ public class Main {
     static Scanner read = new Scanner(System.in);
 
     public static void main(String[] args) {
+        Hogwarts.addAssistant("admin", "admin");
         runMenu();
     }
 
@@ -378,12 +379,14 @@ public class Main {
             if (choice.equals("View")) {
                 System.out.println("- Students");
                 System.out.println("- Teachers");
+                System.out.println("- Courses");
                 System.out.println("- Inbox");
                 System.out.print("> Which one do you wish to view? ");
                 String view = read.nextLine();
                 switch (view) {
                     case "Students" -> Hogwarts.viewAllStudents();
                     case "Teachers" -> Hogwarts.viewAllTeachers();
+                    case "Courses" -> Hogwarts.viewAllCourses();
                     case "Inbox" -> {
                         for (List<String> mail : Assistant.getInboxList()) {
                             switch (mail.get(1)) {
@@ -450,7 +453,7 @@ public class Main {
                 }
             }
             // remove students and teachers
-            else if (choice.equals("remove")) {
+            else if (choice.equals("Remove")) {
                 System.out.println("- Teacher");
                 System.out.println("- Student");
                 System.out.print("> Which user do you wish to remove? ");

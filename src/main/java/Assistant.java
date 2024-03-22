@@ -13,14 +13,6 @@ public class Assistant extends Account {
         return inboxList;
     }
 
-    // view all
-    public void viewStudents(Course course) {
-        System.out.println("> Here's the list of students enrolled for the course " + course.getTitle());
-        for (Student s : course.getStudentList()) {
-            System.out.println("- " + s.getUsername());
-        }
-    }
-
     // sign up other accounts
     public void signUpTeacher(String username, String password) {
         Hogwarts.addTeacher(username, password);

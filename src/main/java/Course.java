@@ -44,7 +44,7 @@ public class Course {
     public void viewStudents() {
         System.out.println("> Here's the list of students enrolled in this course:");
         for (Student s : this.studentList) {
-            System.out.println("- " + s.getUsername());
+            System.out.println("- " + s.getUsername() + " (" + s.getHouse() + ")");
         }
     }
 }

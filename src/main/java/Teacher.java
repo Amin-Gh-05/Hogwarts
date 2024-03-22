@@ -36,7 +36,7 @@ public class Teacher extends Account {
     public void viewStudents(Course course) {
         System.out.println("> Here's the list of students enrolled for the course " + course.getTitle() + ":");
         for (Student s : course.getStudentList()) {
-            System.out.println(". " + s.getUsername());
+            System.out.println(". " + s.getUsername() + " (" + s.getHouse() + ")");
         }
     }
 
