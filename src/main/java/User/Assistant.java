@@ -1,3 +1,7 @@
+package User;
+
+import Hogwarts.Hogwarts;
+
 import java.util.ArrayList;
 import java.util.List;
 

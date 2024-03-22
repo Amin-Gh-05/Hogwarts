@@ -1,3 +1,7 @@
+package User;
+
+import Course.Course;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,6 +28,7 @@ public class Teacher extends Account {
     public List<Integer> getScoreList() {
         return this.scoreList;
     }
+
     public List<Course> getCourseList() {
         return this.courseList;
     }

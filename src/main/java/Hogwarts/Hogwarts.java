@@ -1,3 +1,11 @@
+package Hogwarts;
+
+import Course.Course;
+import User.Account;
+import User.Assistant;
+import User.Student;
+import User.Teacher;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;

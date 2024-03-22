@@ -1,3 +1,9 @@
+import Course.Course;
+import Hogwarts.Hogwarts;
+import User.Assistant;
+import User.Student;
+import User.Teacher;
+
 import java.util.List;
 import java.util.Scanner;
 import java.util.UUID;
@@ -27,7 +33,7 @@ public class Main {
                     |                      /\\____/                                        |
                     |                      \\_/__/                                         |
                     '---------------------------------------------------------------------'""");
-            System.out.println("> Welcome to Hogwarts school management system");
+            System.out.println("> Welcome to Hogwarts.Hogwarts school management system");
             System.out.println("- Log in");
             System.out.println("- Sign up");
             System.out.println("- Quit");
@@ -191,7 +197,7 @@ public class Main {
                     }
                 }
                 if (!(inList)) {
-                    System.out.println("> Course not available!");
+                    System.out.println("> Course.Course not available!");
                 }
             }
             // score student based on course and username
@@ -454,8 +460,8 @@ public class Main {
             }
             // remove students and teachers
             else if (choice.equals("Remove")) {
-                System.out.println("- Teacher");
-                System.out.println("- Student");
+                System.out.println("- User.Teacher");
+                System.out.println("- User.Student");
                 System.out.print("> Which user do you wish to remove? ");
                 String user = read.nextLine();
                 switch (user) {
@@ -491,7 +497,7 @@ public class Main {
             // find course or user via id
             else if (choice.equals("Get info")) {
                 System.out.println("- User");
-                System.out.println("- Course");
+                System.out.println("- Course.Course");
                 System.out.print("> What are looking for? ");
                 String object = read.nextLine();
                 switch (object) {

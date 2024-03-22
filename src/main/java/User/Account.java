@@ -1,3 +1,7 @@
+package User;
+
+import Course.Course;
+import Hogwarts.Hogwarts;
 import org.apache.commons.codec.digest.DigestUtils;
 
 import java.util.ArrayList;

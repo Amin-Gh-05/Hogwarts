@@ -1,10 +1,10 @@
-# Third Assignment: Hogwarts School Management System 🧙‍♂️
+# Third Assignment: Hogwarts.Hogwarts School Management System 🧙‍♂️
 
-Welcome to your third Advanced Programming (AP) assignment, where you'll embark on the magical journey of building the Hogwarts School Management System. This project aims to streamline administrative tasks at Hogwarts School of Witchcraft and Wizardry, offering a comprehensive platform for managing teachers, students, and courses within the esteemed institution.
+Welcome to your third Advanced Programming (AP) assignment, where you'll embark on the magical journey of building the Hogwarts.Hogwarts School Management System. This project aims to streamline administrative tasks at Hogwarts.Hogwarts School of Witchcraft and Wizardry, offering a comprehensive platform for managing teachers, students, and courses within the esteemed institution.
 
 ## Prerequisites ✅
 
-Before diving into the enchanting world of Hogwarts, ensure you have the following prerequisites installed on your magical workstation:
+Before diving into the enchanting world of Hogwarts.Hogwarts, ensure you have the following prerequisites installed on your magical workstation:
 
 - Java 21
 - Git
@@ -27,7 +27,7 @@ By completing this assignment, you will:
 4. Implement an interactive menu in the command line's `runMenu()` function of the Main class, enabling users to utilize the program's functionalities seamlessly.
 5. Write a comprehensive report in Markdown format, detailing the tasks you've completed and any challenges encountered. Include UML diagrams of the classes you've developed. For example, a UML diagram for account class is as follows:
 
-	<img src="./Account.png" alt="Image" width="200" height="150">
+	<img src="./User.Account.png" alt="Image" width="200" height="150">
 
 6. Commit your changes and push them to your GitHub repository.
 7. Submit a pull request from your `develop` branch to your `main` branch. Your mentor will review the pull request and merge it upon approval.
@@ -36,7 +36,7 @@ By completing this assignment, you will:
 
 In this section, the functionalities of each user type are explained. Your task is to design the classes to ensure the program possesses the specified functionality. **Ensure that classes are designed with proper encapsulation**, where internal state is hidden and accessed only through well-defined methods. One way to do it is to define getter and setter methods.
 
-### Teacher class:
+### User.Teacher class:
 
 Teachers should be able to manage courses, score students, and access valuable information to enhance their teaching experience on the platform.
 
@@ -46,10 +46,10 @@ Teachers should be able to manage courses, score students, and access valuable i
 - **Take Courses**: Teachers can explore and enroll in courses they wish to teach, displayed on their dashboard.
 - **Score Students**: Teachers can evaluate students by navigating to the scoring section on their dashboard, selecting the appropriate course, and entering scores for each student.
 - **View Courses List**: Access a comprehensive list of courses they teach for an overview of current teaching assignments.
-- **View Course's List of Students**: Check the list of students enrolled in specific courses to monitor their progress.
-- **Show Teacher’s Score on the Menu**: Conveniently monitor their teaching performance by checking their score displayed on the menu.
+- **View Course.Course's List of Students**: Check the list of students enrolled in specific courses to monitor their progress.
+- **Show User.Teacher’s Score on the Menu**: Conveniently monitor their teaching performance by checking their score displayed on the menu.
 
-### Assistant class:
+### User.Assistant class:
 
 The assistant serves as an administrative tool, allowing administrators to create accounts, manage users, courses, and perform various administrative tasks to ensure smooth operation of the platform.
 
@@ -57,29 +57,29 @@ The assistant serves as an administrative tool, allowing administrators to creat
   1. Access the admin panel.
   2. Utilize the provided tools to create a new assistant account.
 - **Login**: Admins can log in to their assistant accounts using their credentials.
-- **Remove a Teacher/Student**: Assistants possess the authority to remove teachers or students from the platform:
+- **Remove a User.Teacher/User.Student**: Assistants possess the authority to remove teachers or students from the platform:
   1. Navigate to the management section in the dashboard.
   2. Select the option to remove a teacher or student.
   3. Confirm the action to remove the selected user.
 - **View Courses and Their List of Students**: Explore the list of courses available on the platform and view enrolled students for each course.
-- **Check Student/Teacher Profile**: Access detailed profiles for both students and teachers for administrative purposes.
-- **Create a Course**: Follow steps to create a new course on the platform:
+- **Check User.Student/User.Teacher Profile**: Access detailed profiles for both students and teachers for administrative purposes.
+- **Create a Course.Course**: Follow steps to create a new course on the platform:
   1. Navigate to the course creation section in the dashboard.
   2. Provide necessary details for the new course.
   3. Confirm and save the course.
 
-### Student class:
+### User.Student class:
 
-Students can perform various actions within the Hogwarts School Management System, including taking courses, viewing teachers, and participating in sorting quizzes.
+Students can perform various actions within the Hogwarts.Hogwarts School Management System, including taking courses, viewing teachers, and participating in sorting quizzes.
 
 - **Taking Courses**: Enroll in courses by taking them.
 - **Viewing All Courses Taken**: View a list of all courses taken.
 - **Viewing All Teachers**: Access a list of all teachers taken courses with.
-- **Taking a Sorting Quiz**: Take a quiz to determine their Hogwarts House (Gryffindor, Hufflepuff, Ravenclaw, or Slytherin).
+- **Taking a Sorting Quiz**: Take a quiz to determine their Hogwarts.Hogwarts House (Gryffindor, Hufflepuff, Ravenclaw, or Slytherin).
 
-### Hogwarts class:
+### Hogwarts.Hogwarts class:
 
-Serving as a central management system for Hogwarts School of Witchcraft and Wizardry, the Hogwarts class facilitates various actions for teachers, students, and administrators.
+Serving as a central management system for Hogwarts.Hogwarts School of Witchcraft and Wizardry, the Hogwarts.Hogwarts class facilitates various actions for teachers, students, and administrators.
 
 - Managing lists of teachers, courses, admins, and students from different Houses.
 - Rating teachers and leaving comments for them.
@@ -90,11 +90,11 @@ Serving as a central management system for Hogwarts School of Witchcraft and Wiz
 - Rating teachers and leaving comments for them as a student.
 - Retrieving course information via UUID.
 
-### Course class:
+### Course.Course class:
 
-Representing specific courses offered at Hogwarts School of Witchcraft and Wizardry, the Course class is capable of setting course information.
+Representing specific courses offered at Hogwarts.Hogwarts School of Witchcraft and Wizardry, the Course.Course class is capable of setting course information.
 
-- **Setting Course Information**:
+- **Setting Course.Course Information**:
   - Store the title of the course.
   - Assign a unique identifier to each course (courseID), represented by a UUID.
   - Maintain a list of students enrolled in the course (students).
@@ -116,7 +116,7 @@ Your submission will be evaluated based on the following criteria:
 
 As an additional challenge, consider implementing the following bonus objectives:
 
-- **Sort Course's List of Students**: Allow sorting of the list of students within a course based on specific criteria.
+- **Sort Course.Course's List of Students**: Allow sorting of the list of students within a course based on specific criteria.
 - **View Weekly Schedule**: Implement functionality for students to view their weekly schedule (optional).
 - **Utilize Abstract Classes and Interfaces**: Explore the usage of abstract classes and interfaces in your Java implementation to achieve better code structure and design.
 - Enhance your classes by incorporating additional attributes and methods to enrich their functionality and expand their capabilities.
