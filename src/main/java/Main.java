@@ -171,6 +171,8 @@ public class Main {
             System.out.println("- Show score");
             System.out.println("- Request course");
             System.out.println("- Check inbox");
+            System.out.println("- Change username");
+            System.out.println("- Check password");
             System.out.println("- Logout");
             System.out.print("> What do you wish to do? ");
             String choice = read.nextLine();
@@ -255,6 +257,20 @@ public class Main {
             } else if (choice.equals("Check inbox")) {
                 teacher.viewComments();
             }
+            // change username
+            else if (choice.equals("Change username")) {
+                System.out.print("> Enter the new username: ");
+                String username = read.nextLine();
+                teacher.changeUsername(username);
+            }
+            // change password
+            else if (choice.equals("Change password")) {
+                System.out.print("> Enter old password");
+                String oldPassword = read.nextLine();
+                System.out.print("> Enter new password");
+                String newPassword = read.nextLine();
+                teacher.changePassword(oldPassword, newPassword);
+            }
             // break the loop
             else if (choice.equals("Logout")) {
                 break;
@@ -280,6 +296,8 @@ public class Main {
             System.out.println("- Comment teacher");
             System.out.println("- Request course");
             System.out.println("- Score teacher");
+            System.out.println("- Change username");
+            System.out.println("- Change password");
             System.out.println("- Logout");
             System.out.print("> What do you wish to do? ");
             String choice = read.nextLine();
@@ -364,6 +382,20 @@ public class Main {
                     System.out.println("> Course not found!");
                 }
             }
+            // change username
+            else if (choice.equals("Change username")) {
+                System.out.print("> Enter new username: ");
+                String username = read.nextLine();
+                student.changeUsername(username);
+            }
+            // change password
+            else if (choice.equals("Change password")) {
+                System.out.print("> Enter old password: ");
+                String oldPassword = read.nextLine();
+                System.out.print("> Enter new password: ");
+                String newPassword = read.nextLine();
+                student.changePassword(oldPassword, newPassword);
+            }
             // break the loop
             else if (choice.equals("Logout")) {
                 break;
@@ -386,6 +418,8 @@ public class Main {
             System.out.println("- Remove");
             System.out.println("- Get info");
             System.out.println("- Create course");
+            System.out.println("- Change username");
+            System.out.println("- Change password");
             System.out.println("- Logout");
             System.out.print("> What do you wish to do? ");
             String choice = read.nextLine();
@@ -527,6 +561,20 @@ public class Main {
                 System.out.print("> Enter the title: ");
                 String course = read.nextLine();
                 assistant.createCourse(course);
+            }
+            // change username
+            else if (choice.equals("Change username")) {
+                System.out.print("> Enter new username: ");
+                String username = read.nextLine();
+                assistant.changeUsername(username);
+            }
+            // change password
+            else if (choice.equals("Change password")) {
+                System.out.print("> Enter old password: ");
+                String oldPassword = read.nextLine();
+                System.out.print("> Enter new password: ");
+                String newPassword = read.nextLine();
+                assistant.changePassword(oldPassword, newPassword);
             }
             // break the loop
             else if (choice.equals("Logout")) {

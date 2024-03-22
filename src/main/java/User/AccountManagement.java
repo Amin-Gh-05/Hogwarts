@@ -1,9 +1,9 @@
 package User;
 
 public interface AccountManagement {
-    public boolean validatePassword(String enteredPassword);
+    boolean validatePassword(String enteredPassword);
 
-    public void changeUsername(String newUsername);
+    void changeUsername(String newUsername);
 
-    public void changePassword(String oldPassword, String newPassword);
+    void changePassword(String oldPassword, String newPassword);
 }
