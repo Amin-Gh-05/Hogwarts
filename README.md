@@ -8,12 +8,9 @@ A terminal based management app for Hogwarts school.
 As you enter the main menu of the app, you have options for your actions. any option which is desiered should be typed as written and it goes on the same with dashboards.
 there's no file attached to the app, so any data added while using it will fade after closing.
 
-Here are UML diagrams of project:
+Here are UML diagram of project:
 
-![main class](src/diagrams/main.png)
-![hogwarts class](src/diagrams/hogwarts.png)
-![course class](src/diagrams/course.png)
-![user package](src/diagrams/user.png)
+![uml diagram of project](src/Assignment3.png)
 
 ## Getting Started
 
